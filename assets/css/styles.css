@@ -181,7 +181,7 @@ img {
   .nav__menu{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     background-color: var(--black-color);
     width: 80%;
     height: 100%;
@@ -216,6 +216,9 @@ img {
 
 /* Show menu */
 
+.show-menu{
+  right: 0;
+}
 
 /* Change background header */
 
@@ -238,7 +241,7 @@ img {
 }
 
 .button:hover{
-  box-shadow: 0 8px 32px hsl(hue, saturation, lightness);
+  box-shadow: 0 8px 32px hsl(230, 80%, 50%, .3);
   color: var(--white-color);
 }
 
