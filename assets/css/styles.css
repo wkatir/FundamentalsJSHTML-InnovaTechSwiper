@@ -1,27 +1,29 @@
 /*=============== GOOGLE FONTS ===============*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
- /*========== Colors ==========*/
-/*Color mode HSL(hue, saturation, lightness)*/
---first-color: hsl(230, 80%, 50%);       
---second-color: hsl(190, 85%, 50%);       
---first-gradient: linear-gradient(90deg,
-                hsl(230, 80%, 50%),
-                hsl(190, 85%, 50%));
---title-color: hsl(230, 25%, 18%);      
---text-color: hsl(230, 16%, 30%);        
---text-color-light: hsl(230, 12%, 65%);  
---body-color: hsl(230, 100%, 99%);       
---container-color: hsl(0, 0%, 100%);      
---white-color: hsl(0, 0%, 100%);         
---black-color: hsl(230, 32%, 15%);       
---gray-border: hsl(230, 16%, 92%);       
---black-border: hsl(230, 25%, 25%);      
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(230, 80%, 50%);
+  --second-color: hsl(190, 85%, 50%);
+  --first-gradient: linear-gradient(
+    90deg,
+    hsl(230, 80%, 50%),
+    hsl(190, 85%, 50%)
+  );
+  --title-color: hsl(230, 25%, 18%);
+  --text-color: hsl(230, 16%, 30%);
+  --text-color-light: hsl(230, 12%, 65%);
+  --body-color: hsl(230, 100%, 99%);
+  --container-color: hsl(0, 0%, 100%);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(230, 32%, 15%);
+  --gray-border: hsl(230, 16%, 92%);
+  --black-border: hsl(230, 25%, 25%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -30,8 +32,8 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -75,7 +77,10 @@ body {
   color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
@@ -108,7 +113,7 @@ img {
 .section {
   padding-block: 5rem 1rem;
 }
-.section__title, 
+.section__title,
 .section__subtitle {
   text-align: center;
 }
@@ -124,7 +129,7 @@ img {
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi-bold);
   color: var(--second-color);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .main {
@@ -133,16 +138,17 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 
-.header{
+.header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--black-color);
+  background-color: transparent;
   z-index: var(--z-fixed);
+  transition: background-color .4s;
 }
 
-.nav{
+.nav {
   position: relative;
   height: var(--header-height);
   display: flex;
@@ -150,35 +156,35 @@ img {
   align-items: center;
 }
 
-.nav__logo{
+.nav__logo {
   display: flex;
   align-items: center;
-  column-gap: .25rem;
+  column-gap: 0.25rem;
 }
 
-.nav__logo span{
+.nav__logo span {
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
-.nav__logo i{
+.nav__logo i {
   color: var(--first-color);
   font-size: 1.5rem;
-
 }
 
-.nav__toggle, .nav__close{
+.nav__toggle,
+.nav__close {
   font-size: 1.5rem;
   color: var(--white-color);
   cursor: pointer;
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
 /* Navigation for mobile devices */
 
-@media (max-width: 1150px){
-  .nav__menu{
+@media (max-width: 1150px) {
+  .nav__menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -187,96 +193,194 @@ img {
     height: 100%;
     padding: 7.5rem 3.5rem 0;
     border-left: 2px solid var(--black-border);
-    transition: right .4s;
+    transition: right 0.4s;
   }
-} 
+}
 
-.nav__list{
+.nav__list {
   display: flex;
   flex-direction: column;
   row-gap: 4rem;
 }
 
-.nav__link{
+.nav__link {
   color: var(--text-color-light);
   font-weight: var(--font-semi-bold);
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
-.nav__link:hover{
+.nav__link:hover {
   color: var(--first-color);
 }
 
-.nav__close{
+.nav__close {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
 }
 
-
 /* Show menu */
 
-.show-menu{
+.show-menu {
   right: 0;
 }
 
 /* Change background header */
 
+.bg-header{
+  background-color: var(--body-color);
+  box-shadow: 0 4px 16px hsla(255,90%,8%,.1);
+}
+
+.bg-header .nav__logo span, .bg-header .nav__toggle{
+  color: var(--title-color);
+}
 
 /* Active link */
 
-
 /*=============== HOME ===============*/
 
+.home{
+  position: relative;
+  background-color: var(--black-color);
+}
+
+.home__container{
+  position: relative;
+  row-gap: 3rem;
+  padding-block: 2.5rem 6rem;
+}
+
+.home__content{
+  row-gap: 2.5rem;
+}
+
+.home__data{
+  text-align: center;
+}
+
+.home__title{
+  color: var(--white-color);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+}
+
+.home__description{
+  margin-bottom: 2.5rem;
+  color: var(--text-color-light);
+}
+
+.home__buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home__info{
+  display: flex;
+  justify-content: center;
+  column-gap: 4.5rem;
+}
+
+.home__info-title{
+  color: var(--second-color);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: .5rem;
+}
+
+.home__info-description{
+  font-size: var(--small-font-size);
+  color: var(--white-color);
+}
+
+.home__images{
+  position: relative;
+  justify-self: center;
+}
+
+.home__img-1{
+  width: 250px;
+  margin-left: 3.5rem;
+}
+
+.home__img-2{
+  width: 150px;
+  border: 5px solid var(--black-color);
+  position: absolute;
+  left: 0;
+  bottom: -3.5rem;
+}
+
+.home__lines{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
 
 /*=============== BUTTON ===============*/
 
-.button{
+.button {
   display: inline-flex;
   background: var(--first-gradient);
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
   padding: 1rem 2rem;
-  transition: box-shadow .4s;
+  transition: box-shadow 0.4s;
 }
 
-.button:hover{
-  box-shadow: 0 8px 32px hsl(230, 80%, 50%, .3);
+.button:hover {
+  box-shadow: 0 8px 32px hsl(230, 80%, 50%, 0.3);
   color: var(--white-color);
+}
+
+.button__link{
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: var(--first-color);
+}
+
+.button__link span{
+  font-weight: var(--font-semi-bold);
+}
+
+.button__link i{
+  font-size: 1.5rem;
+  transition: transform .4s;
+}
+
+.button__link:hover i{
+  transform: translateX(.25rem);
 }
 
 /*=============== ABOUT ===============*/
 
-
 /*=============== SERVICES ===============*/
-
 
 /* Swiper class */
 
-
 /*=============== PROJECTS ===============*/
-
 
 /*=============== CONTACT ===============*/
 
-
 /*=============== FOOTER ===============*/
-
 
 /*=============== SCROLL BAR ===============*/
 
-
 /*=============== SCROLL UP ===============*/
 
-
 /* Show Scroll Up */
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
-
 /* For medium devices */
-
 
 /* For large devices */
