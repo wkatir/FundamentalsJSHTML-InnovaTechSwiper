@@ -5,26 +5,24 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(230, 80%, 50%);
-  --second-color: hsl(190, 85%, 50%);
-  --first-gradient: linear-gradient(
-    90deg,
-    hsl(230, 80%, 50%),
-    hsl(190, 85%, 50%)
-  );
-  --title-color: hsl(230, 25%, 18%);
-  --text-color: hsl(230, 16%, 30%);
-  --text-color-light: hsl(230, 12%, 65%);
-  --body-color: hsl(230, 100%, 99%);
-  --container-color: hsl(0, 0%, 100%);
-  --white-color: hsl(0, 0%, 100%);
-  --black-color: hsl(230, 32%, 15%);
-  --gray-border: hsl(230, 16%, 92%);
-  --black-border: hsl(230, 25%, 25%);
-
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+--first-color: hsl(214, 95%, 45%);
+--second-color: hsl(200, 85%, 40%);
+--first-gradient: linear-gradient(
+  90deg,
+  hsl(214, 95%, 45%), 
+  hsl(200, 85%, 40%)
+);
+--title-color: hsl(214, 50%, 15%);
+--text-color: hsl(214, 40%, 25%);
+--text-color-light: hsl(214, 30%, 45%);
+--body-color: hsl(214, 20%, 97%);
+--container-color: hsl(0, 0%, 100%);
+--white-color: hsl(0, 0%, 100%);
+--black-color: hsl(214, 55%, 10%);
+--gray-border: hsl(214, 20%, 90%);
+--black-border: hsl(214, 45%, 20%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
@@ -811,8 +809,6 @@ img {
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
   }
-
-  
 }
 
 /* For large devices */
@@ -1035,7 +1031,6 @@ img {
   .footer__links,
   .footer__list {
     row-gap: 1rem;
-
   }
 
   .scrollup {
